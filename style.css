@@ -1,0 +1,92 @@
+*{
+    text-align: center;
+}
+    body{
+    max-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    background-color: black;
+    color: white;
+}
+
+main{
+    width: 40%;
+    margin: 40px auto;
+}
+
+#icon{
+    transition: transform 1s;
+}
+
+#icon.active{
+    transform: rotate(180deg);
+    
+}
+
+#rules{
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s linear 0.5s;
+}
+
+#rules.collapse{
+    height: 100%;
+}
+
+#rulesContainer{
+    background-color: white;
+    border: 5px solid rgb(255, 136, 0);
+    color: black;
+    font-size: 18px;
+}
+
+.scoreBar{
+    display: flex;
+    justify-content: space-between;
+}
+
+#optionContainer{
+    display: flex;
+}
+
+button{
+    background-color: rgb(255, 128, 0);
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+    width: 90px;
+    margin: 10px auto;
+}
+
+button:hover{
+    background-color: white;
+    color:  rgb(255, 128, 0);
+}
+
+#reset{
+    display: none;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+#winnerBoard, #scoreBoard{
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+@media screen and (max-width:450px) {
+    main{
+        width: 80%;
+    }
+
+    h1{
+        font-size: 30px;
+    }
+
+    #optionContainer{
+        flex-direction: column;
+    }
+}
+
